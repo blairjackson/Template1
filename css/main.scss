@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+//<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+// <div>Icons made by <a href="https://www.flaticon.com/authors/chanut" title="Chanut">Chanut</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+// <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+
+:root {
+    --font_family: 'Roboto', sans-serif;
+    --light_text: white;
+    --dark_text: black;
+}
+
+* {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    width: 50%;
+
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: #33a0aa;
+    background-image: url("/background/background.svg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.large_heading {
+    font-size: 2em;
+}
+
+.wrapper {
+    //position: absolute;
+    min-height: 100%;
+    width: 100%;
+    outline: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+
+// FIRST SECTION    
+
+.landing_content {
+    // outline: 1px solid black;
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    padding: 1em;
+    font-family: var(--font_family);
+    color: var(--light_text);
+}
+
+.logo {
+    height: 15vh;
+    padding: 1em;
+}
+
+// SECOND SECTION
+
+.second_background {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: rgba(89, 112, 129, 0.8);
+
+}
+
+.second_content {
+    // outline: 1px solid black;
+    min-height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    font-family: var(--font_family);
+    color: var(--light_text);
+
+    hr {
+        background: var(--light_text);
+    }
+}
+
+.second_image {
+    height: 40vh;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3em;
+    padding-top: 3em;
+    border-radius: 10px;
+}
+
+
+
+//  RESIZE
+
+@media only screen and (min-width: 600px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+    }
+
+    .second_heading {
+        padding-bottom: 2em;
+        padding-top: 2em;
+    }
+
+    .second_image {
+        grid-column: 2;
+        align-self: end;
+    }
+
+    .image_writing {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: center;
+    }
+
+    .second_content {
+        width: 90vw;
+        display: block;
+        justify-content: end;
+    }
+}
+
+
+
+
+// THIRD SECTION
+
+//its not showing below, figure out how to get it beneath
+.third_background {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 234, 208, 0.7);
+}
+
+.third_content {
+    // outline: 200px solid red;
+    min-height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    padding: 1em;
+    font-family: var(--font_family);
+    color: var(--dark_text);
+
+    hr {
+        background: var(--dark_text);
+    }
+}
+
+.box_container {
+    display: flex;
+    flex-direction: column;
+}
+
+//  RESIZE
+
+@media only screen and (min-width: 600px) {
+    .box_container {
+        padding-top: 6em;
+        flex-direction: row;
+    }
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    transform: rotate(45deg);
+    margin: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_img {
+    height: 4em;
+    transform: rotate(-45deg);
+}
+
+
+
+// FOOTER
+footer {
+    background: #4A7B9D;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    color: var(--light_text);
+    font-family: var(--font_family);
+
+}
